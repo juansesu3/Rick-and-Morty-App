@@ -15,11 +15,11 @@ const Pagination = ({ info, setPageNumber, pageNumber }) => {
     <ReactPaginate 
     className={`pagination justify-content-center gap-4 my-4 text-decoration-none text-pagination `}
     nextLabel='Next'
-    nextClassName={`btn btn-primary ${styles.text}`}
+    nextClassName={`btn btn-secondary ${styles.text}`}
     previousLinkClassName={` ${styles.text}`}
     nextLinkClassName={` ${styles.text}`}
     previousLabel='Prev'
-    previousClassName={`btn btn-primary ${styles.text}`}
+    previousClassName={`btn btn-secondary ${styles.text}`}
     pageClassName='page-item'
     pageLinkClassName='page-link'
     activeClassName='active'

@@ -21,8 +21,8 @@ const Cards = ({ results }) => {
                         <img src={image} alt='' className={`img-fluid ${styles.img}`} />
                         <div className='content p-2' >
                             <div className='fs-4 fw-bold mb-4' >{name}</div>
-                            <div className='fs-6' >Last location</div>
-                            <div className='fs-5' >{location.name}</div>
+                            <div className='fs-6 text-secondary fw-semibold' >Last location</div>
+                            <div className='fs-5 fst-normal' >{location.name}</div>
                         </div>
 
                     </div>
