@@ -1,8 +1,16 @@
+//   ██████╗  ██████╗
+//       ██║░██╔════╝
+//       ██║░ █████╗
+//    ██ ██║░  ╚═══██╗
+//    █████║░ ██████╔╝ 
+//    ╚════╝ ╚═════╝   ██
+
 import React, { useEffect, useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap"
 import Cards from "./components/Cards/Cards";
 import Filters from "./components/Filters/Filters";
+import Pagination from './components/Pagination/Pagination';
 
 function App() {
   
@@ -45,6 +53,7 @@ function App() {
         </div>
 
       </div>
+      <Pagination setPageNumber={setPageNumber}/>
     </div>
   );
 }
