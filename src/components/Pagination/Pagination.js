@@ -21,7 +21,7 @@ const Pagination = ({ info, setPageNumber, pageNumber }) => {
     previousLabel='Prev'
     previousClassName={`btn btn-secondary ${styles.text}`}
     pageClassName='page-item'
-    pageLinkClassName='page-link'
+    pageLinkClassName={`page-link btn btn-outline-dark ${styles.pagBtn}`}        
     activeClassName='active'
     forcePage={pageNumber=== 1 ? 0: pageNumber - 1}
     onPageChange={(data)=>{setPageNumber(data.selected + 1)}}

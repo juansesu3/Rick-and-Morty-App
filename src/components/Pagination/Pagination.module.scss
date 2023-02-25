@@ -5,3 +5,14 @@
     
     
 }
+
+.pagBtn{
+    background-color: #3c3e44;
+    color: white;
+    font-weight: bold;
+    &:hover{
+        color: #3c3e44;
+        background-color: #717480;
+    }
+
+}
