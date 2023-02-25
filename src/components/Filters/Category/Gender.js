@@ -1,14 +1,14 @@
 import React from 'react'
 import FilterBTN from './FilterBTN'
 
-const Gender = () => {
-    let genders = ['female','male','genderless','unknown']
+const Gender = ({ setPageNumber, setGender }) => {
+    let genders = ['female', 'male', 'genderless', 'unknown']
 
     return (
         <div className="accordion-item">
             <h2 className="accordion-header" id="headingOne">
                 <button
-                    className="accordion-button"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
@@ -19,12 +19,18 @@ const Gender = () => {
             </h2>
             <div
                 id="collapseOne"
-                className="accordion-collapse collapse show"
+                className="accordion-collapse collapse "
                 aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
-                <div className="accordion-body">
-                    {genders.map((items, index)=>(
-                        <FilterBTN key={index} name='gender' index={index} items={items}/>
+                <div className="accordion-body d-flex flex-wrap gap-3">
+                    {genders.map((items, index) => (
+                        <FilterBTN
+                            setPageNumber={setPageNumber}
+                            task={setGender}
+                            key={index}
+                            name='gender'
+                            index={index}
+                            items={items} />
 
                     ))}
 
