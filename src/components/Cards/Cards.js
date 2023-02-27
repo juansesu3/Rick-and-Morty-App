@@ -6,9 +6,10 @@
 //    ╚════╝ ╚═════╝   ██
 
 import React from 'react';
-import styles from './Cards.module.scss'
+import { Link } from 'react-router-dom'
+import styles from './Cards.module.scss';
 
-const Cards = ({ results }) => {
+const Cards = ({ results, page }) => {
 
     let display;
     if (results) {
@@ -16,7 +17,10 @@ const Cards = ({ results }) => {
         display = results.map((x) => {
             let { id, name, image, location, status } = x
             return (
-                <div key={id} className='col-4 mb-4 position-relative' >
+                <Link
+                style={{textDecoration:"none"}}
+                to={`${page}${id}`}
+                key={id} className='col-4 mb-4 position-relative' >
                     <div className={`${styles.cards}`} >
                         <img src={image} alt='' className={`img-fluid ${styles.img}`} />
                         <div className='content p-2' >
@@ -46,7 +50,7 @@ const Cards = ({ results }) => {
                         }
                 })()}
                     
-                </div>
+                </Link>
                 )
         });
 
